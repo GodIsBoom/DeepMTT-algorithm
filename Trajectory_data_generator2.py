@@ -146,6 +146,7 @@ def trajectory_batch_generator2(batch_size, data_len):
 
 ##==============================================================================
 ##保存成mat数据
+#my_traj, my_obser, Tran_m = trajectory_batch_generator(20,50)
 #import scipy.io as scio
 #mydata = {'my_traj':my_traj, 'my_obser':my_obser}
 #scio.savemat('Traj_sample', mydata)

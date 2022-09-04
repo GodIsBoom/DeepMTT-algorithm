@@ -223,10 +223,10 @@ sess.run(tf.global_variables_initializer())
 
 #==============================================================================
 #模型加载
-saver = tf.train.Saver()
-model_path = "/home/ljx/文档/OpenSources/DeepMTT/Models/LMTT.ckpt"
-load_path = saver.restore(sess, model_path)
-print ("Model restored from file: %s" % model_path)
+#saver = tf.train.Saver()
+#model_path = "./Models/LMTT.ckpt"
+#load_path = saver.restore(sess, model_path)
+#print ("Model restored from file: %s" % model_path)
 
 ##直接加载部分模型参数
 ##-----1,save the lstm network parameters
@@ -295,7 +295,7 @@ for i in range(iter_time):
     if (i+1)%save_st == 0:
         #继续保存模型
         saver = tf.train.Saver()
-        model_path = "/home/ljx/文档/OpenSources/DeepMTT/Models/LMTT.ckpt"
+        model_path = "./LMTT.ckpt"
 #        save_path = saver.save(sess, model_path, global_step=i)
         save_path = saver.save(sess, model_path)
 #        print "Model saved in file: %s" % save_path

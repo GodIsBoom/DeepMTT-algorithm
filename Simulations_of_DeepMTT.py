@@ -205,7 +205,7 @@ sess.run(tf.global_variables_initializer())
 #==============================================================================
 #模型加载
 saver = tf.train.Saver()
-model_path = "/home/ljx/文档/OpenSources/DeepMTT/Models/LMTT.ckpt"
+model_path = "./Models/LMTT.ckpt"
 load_path = saver.restore(sess, model_path)
 print ("Model restored from file: %s" % model_path)
 
