@@ -295,7 +295,7 @@ for i in range(iter_time):
     if (i+1)%save_st == 0:
         #继续保存模型
         saver = tf.train.Saver()
-        model_path = "./LMTT.ckpt"
+        model_path = "./Models/LMTT.ckpt"
 #        save_path = saver.save(sess, model_path, global_step=i)
         save_path = saver.save(sess, model_path)
 #        print "Model saved in file: %s" % save_path
