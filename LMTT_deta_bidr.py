@@ -239,7 +239,7 @@ sess.run(tf.global_variables_initializer())
 #saver_outputs.restore(sess, model_path)
 
 #迭代总次数
-iter_time = 1000000
+iter_time = 10000
 #显示准确率的相隔次数
 accu_st = 10
 save_st = 20
@@ -263,9 +263,10 @@ def Data_Pro2(data):
 
 #==============================================================================
 #训练：========================================================================
-for i in range(iter_time):    
+ori_traj,_,tra_traj,output_results = creat_batch3(0,100000-1,30,3,BN)
+for i in range(iter_time):
 #    _,_,_, batch_input, output_results= creat_batch(_batch_size, timestep_size)
-    ori_traj,_,tra_traj,output_results = creat_batch3(0,100000-1,30,3,BN)
+    #ori_traj,_,tra_traj,output_results = creat_batch3(0,100000-1,30,3,BN)
 #    ori_traj_c, ori_traj_f = data_change(ori_traj)
 #    tra_traj_c, _ = data_change(tra_traj)
 #    #数据处理1----整个batch数据中的最大值作为归一化   
